@@ -20,7 +20,7 @@ export function FeaturedCaseStudy() {
     <section
       ref={ref}
       aria-labelledby="case-study-heading"
-      className="border-t border-rule bg-paper py-16 md:py-24 lg:py-40"
+      className="border-t border-rule bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto grid max-w-[1280px] grid-cols-4 gap-x-6 gap-y-10 px-5 md:grid-cols-8 md:px-10 lg:grid-cols-12 lg:gap-y-0 lg:px-20">
         <SectionReveal

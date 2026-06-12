@@ -14,7 +14,7 @@ export function ClientTestimonial() {
     <section
       ref={ref}
       aria-label="Client testimonial"
-      className="bg-paper py-16 md:py-24 lg:py-40"
+      className="bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20">
         <SectionReveal revealed={revealed}>

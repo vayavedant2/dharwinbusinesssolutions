@@ -20,7 +20,7 @@ export function ClosingCtaBanner() {
       className="bg-ink-90 text-paper"
     >
       <div
-        className={`mx-auto max-w-[960px] px-5 py-16 text-center transition-[opacity,transform] duration-[600ms] motion-reduce:transition-none md:px-10 md:py-24 lg:py-40 ${
+        className={`mx-auto max-w-[960px] px-5 text-center transition-[opacity,transform] duration-[600ms] motion-reduce:transition-none md:px-10 max-lg:py-16 md:max-lg:py-24 ${
           revealed
             ? "translate-y-0 opacity-100"
             : "translate-y-4 opacity-0 motion-reduce:translate-y-0 motion-reduce:opacity-100"

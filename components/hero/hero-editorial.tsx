@@ -39,7 +39,7 @@ export function HeroEditorial() {
       aria-labelledby="home-hero-heading"
       className="bg-paper"
     >
-      <div className="mx-auto grid max-w-[1280px] grid-cols-4 gap-x-6 px-5 py-12 md:grid-cols-8 md:px-10 md:py-16 lg:grid-cols-12 lg:gap-x-6 lg:px-20 lg:py-20">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-4 gap-x-6 px-5 py-12 md:grid-cols-8 md:px-10 md:py-16 lg:grid-cols-12 lg:gap-x-6 lg:px-20 lg:pt-20 lg:pb-8">
         <div className="col-span-4 lg:col-span-7">
           <p
             className="hero-fade-up mb-6 font-sans text-[0.6875rem] font-medium uppercase tracking-[0.22em] text-muted"

@@ -55,7 +55,7 @@ export function PositioningParagraph() {
     <section
       ref={sectionRef}
       aria-label="Positioning statement"
-      className="bg-paper py-16 md:py-24 lg:py-40"
+      className="section-compact bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div
         className={`mx-auto max-w-[720px] px-5 text-center transition-[opacity,transform] duration-[600ms] motion-reduce:transition-none md:px-10 ${

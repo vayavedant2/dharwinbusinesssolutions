@@ -5,7 +5,7 @@ import { SectionReveal } from "@/components/ui/section-reveal";
 import { StatBlock } from "@/components/ui/stat-block";
 import { useSectionReveal } from "@/lib/use-section-reveal";
 import { useSyncExternalStore } from "react";
-import { BY_THE_NUMBERS } from "./home-content";
+import { ABOUT_BY_THE_NUMBERS } from "./about-content";
 
 function subscribeToReducedMotion(callback: () => void) {
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -17,7 +17,7 @@ function getReducedMotionPreference() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-export function ByTheNumbers() {
+export function AboutByTheNumbers() {
   const { ref, revealed } = useSectionReveal();
   const prefersReducedMotion = useSyncExternalStore(
     subscribeToReducedMotion,
@@ -28,18 +28,18 @@ export function ByTheNumbers() {
   return (
     <section
       ref={ref}
-      aria-labelledby="by-the-numbers-heading"
+      aria-labelledby="about-by-the-numbers-heading"
       className="border-y border-rule bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20">
         <SectionReveal revealed={revealed} className="text-center lg:text-left">
-          <SectionKicker id="by-the-numbers-heading">
+          <SectionKicker id="about-by-the-numbers-heading">
             DHARWIN BY THE NUMBERS
           </SectionKicker>
         </SectionReveal>
 
         <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:mt-16 lg:grid-cols-4 lg:gap-x-6">
-          {BY_THE_NUMBERS.map((stat, index) => (
+          {ABOUT_BY_THE_NUMBERS.map((stat, index) => (
             <SectionReveal
               key={stat.caption}
               revealed={revealed}
@@ -55,12 +55,6 @@ export function ByTheNumbers() {
             </SectionReveal>
           ))}
         </div>
-
-        <SectionReveal revealed={revealed} delay={400}>
-          <p className="mt-12 text-center font-sans text-sm text-muted lg:mt-16 lg:text-left">
-            Metrics current as of 2026, updated quarterly.
-          </p>
-        </SectionReveal>
       </div>
     </section>
   );

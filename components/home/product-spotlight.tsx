@@ -20,7 +20,7 @@ export function ProductSpotlight() {
     <section
       ref={ref}
       aria-labelledby="product-spotlight-heading"
-      className="bg-ink-90 py-16 text-paper md:py-24 lg:py-40"
+      className="bg-ink-90 text-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 text-center md:px-10 lg:px-20">
         <SectionReveal revealed={revealed}>

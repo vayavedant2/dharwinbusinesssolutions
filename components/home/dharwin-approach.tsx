@@ -14,7 +14,7 @@ export function DharwinApproach() {
     <section
       ref={ref}
       aria-labelledby="dharwin-approach-heading"
-      className="border-t border-rule bg-paper py-16 md:py-24 lg:py-40"
+      className="border-t border-rule bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20">
         <div className="grid grid-cols-4 gap-x-6 md:grid-cols-8 lg:grid-cols-12">

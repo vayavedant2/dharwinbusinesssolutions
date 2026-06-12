@@ -23,7 +23,7 @@ export function SolutionsGrid() {
     <section
       ref={ref}
       aria-labelledby="solutions-grid-heading"
-      className="border-t border-rule bg-paper py-16 md:py-24 lg:py-40"
+      className="border-t border-rule bg-paper max-lg:py-16 md:max-lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20">
         <SectionReveal revealed={revealed}>
