@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #0b1020;
+  --paper: #faf8f4;
+  --paper-elevated: #ffffff;
+  --ember: #c2410c;
+  --ember-soft: #fce7d8;
+  --muted: #5c627a;
+  --rule: #e5e2d9;
+  --ink-90: #1a1f36;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-elevated: var(--paper-elevated);
+  --color-ember: var(--ember);
+  --color-ember-soft: var(--ember-soft);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-ink-90: var(--ink-90);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-word-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-fade-up {
+    opacity: 0;
+    animation: hero-fade-up 600ms ease-out forwards;
+  }
+
+  .hero-word-reveal {
+    opacity: 0;
+    animation: hero-word-reveal 500ms ease-out forwards;
+  }
+
+  .logo-marquee-track {
+    animation: logo-marquee 40s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    gap: 2rem 3rem;
+  }
+
+  .logo-marquee-group:last-child {
+    display: none;
+  }
 }
